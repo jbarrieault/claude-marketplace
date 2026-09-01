@@ -1,0 +1,11 @@
+{
+  "name": "ruthless-pr-edit",
+  "description": "Write or edit a pull request title and body by ruthless subtraction",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jacob Barrieault"
+  },
+  "homepage": "https://github.com/jbarrieault/claude-marketplace",
+  "repository": "https://github.com/jbarrieault/claude-marketplace",
+  "license": "MIT"
+}

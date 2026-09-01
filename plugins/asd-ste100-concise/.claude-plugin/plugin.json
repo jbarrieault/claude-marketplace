@@ -1,0 +1,11 @@
+{
+  "name": "asd-ste100-concise",
+  "description": "Write responses in ASD-STE100 Simplified Technical English, kept short",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jacob Barrieault"
+  },
+  "homepage": "https://github.com/jbarrieault/claude-marketplace",
+  "repository": "https://github.com/jbarrieault/claude-marketplace",
+  "license": "MIT"
+}

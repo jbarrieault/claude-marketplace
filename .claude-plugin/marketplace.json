@@ -1,0 +1,35 @@
+{
+  "name": "jbarrieault",
+  "owner": {
+    "name": "Jacob Barrieault"
+  },
+  "metadata": {
+    "description": "Private marketplace for my homegrown Claude Code plugins",
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "asd-ste100-concise",
+      "source": "./plugins/asd-ste100-concise",
+      "description": "Write responses in ASD-STE100 Simplified Technical English, kept short",
+      "version": "1.0.0",
+      "author": {
+        "name": "Jacob Barrieault"
+      },
+      "keywords": ["writing", "style", "concise", "ste"],
+      "category": "productivity"
+    },
+    {
+      "name": "ruthless-pr-edit",
+      "source": "./plugins/ruthless-pr-edit",
+      "description": "Write or edit a pull request title and body by ruthless subtraction",
+      "version": "1.0.0",
+      "author": {
+        "name": "Jacob Barrieault"
+      },
+      "keywords": ["github", "pull-request", "writing", "editing"],
+      "category": "productivity"
+    }
+  ]
+}
