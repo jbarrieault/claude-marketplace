@@ -1,6 +1,6 @@
 ---
 name: ruthless-pr-edit
-description: Write or edit a pull request title and body by ruthless subtraction — cut until only the essential remains, then add back only what a reviewer would be wrong without. Use when opening a PR, drafting or rewriting a PR description, or tightening an existing PR whose body has grown bloated.
+description: Write or edit a pull request title and body by ruthless subtraction — cut until only the essential remains, then add back only what it would be wrong without. Use when opening a PR, drafting or rewriting a PR description, or tightening an existing PR whose body is bloated.
 ---
 
 # Ruthless PR Edit
@@ -15,8 +15,8 @@ comes last.**
 
 ## The premise
 
-A pull request says **what** is changing. The commits say **how**. The diff says
-**where**. Never do the commits' job or the diff's job.
+A pull request should say **what** is changing. The commits should say **how**. The diff says
+**where**. The PR title and body should never do the commits' job or the diff's job.
 
 Discriminator: if a sentence names a class, file, method, flag, or variable, it is
 almost always *how* — cut it. The exception is when the identifier *is* the change: a
@@ -63,10 +63,8 @@ ticket. Background the reader already has. Explanations of how the code works.
 Alternatives nobody asked about. Future work not in this PR. Self-assessment of the
 work's quality.
 
-**3 — Delete words.** "This PR", "we now", "in order to", "simply", "just",
-"basically", "essentially", "currently", "leverage", "robust", "comprehensive",
-"seamlessly", "under the hood". Hedges. Adverbs. Any sentence whose first job is
-naming itself.
+**3 — Delete fluff words.** "simply", "just", "basically", "essentially", "currently",
+"leverage", "robust", "comprehensive", "seamlessly", "under the hood". Hedges. Adverbs.
 
 **4 — Challenge the identity.** Rubin: "Reduce something to the point that its identity
 is challenged. Notice how many pieces you can remove before the work you're making
@@ -93,7 +91,7 @@ The title is the whole PR for most people who see it. It carries what changed, i
 reader's terms, and stands alone in a merge log a year from now.
 
 - Lead with the change, not the area: "Cache org lookups in Redis", not "Redis changes"
-- No `[WIP]`, no ticket-key prefix unless the repo does it, no trailing period
+- No `[WIP]`, no ticket-key prefix, no trailing period
 - No `refactor:`/`chore:` prefix unless the repo uses conventional commits
 - Under ~70 characters, and shorter is better than clever
 
@@ -111,36 +109,42 @@ Two sections, and the second is optional.
 <only if the change demands it: 1–2 more sentences>
 ```
 
-**Summary** is one sentence. Not two joined by a semicolon. If you cannot say it in one,
+**Summary** is one sentence. Not two joined by a semicolon or an em-dash. If you cannot say it in one,
 you do not yet understand the change well enough to describe it — reread the diff.
 
 **Details** does not exist by default. It appears only when pass 5 found something a
 reviewer would be wrong without, and then it is one or two sentences held to the same
-standard as the Summary. An empty or throat-clearing Details section is worse than no
+standard as the Summary. An empty or superfluous Details section is worse than no
 Details section. Delete it.
 
 Never a section per file. Never a `Changes` bullet list — that is the commit log,
 rendered worse.
 
-A repo's own `pull_request_template.md` overrides this shape. Keep its skeleton, starve
+**IMPORTANT:** A repo's own `pull_request_template.md` overrides this shape. Keep its structure, starve
 it: one sentence per heading, never invent content to fill one, never delete a required
-one. If a section genuinely has nothing to say, write "None."
+one. If a section genuinely has nothing to say, "None."
 
 ## Rules that outrank brevity
 
-1. **Accuracy.** Never cut a true, load-bearing fact to hit a word count. Never let
+1. **Accuracy.** Never cut a true, critical fact to hit a word count. Never let
    compression imply something false about scope or risk.
 2. **You are the reducer, not the author.** Editing someone else's PR, keep their
    meaning and their voice. Cut their words; do not replace them with yours.
 3. **Repo templates win on structure; this skill wins over general PR guidance.** A
    checked-in `pull_request_template.md` sets the headings. Absent one, Summary/Details
    above is the shape, even where broader instructions describe a fuller template.
-   Mechanics outside the body — draft status, labels, ticket links — always follow
-   project and user convention.
-4. **Ask before you publish.** Present the title and body first. Only run
-   `gh pr edit` / `gh pr create` after the user says to, or has already asked for it.
+   Mechanics outside the body — labels, reviewers, ticket links — always follow
+   project and user convention. Draft status follows **Apply it** below.
+
+## Apply it
+
+The passes are not done until the title and body are on the PR.
+
+If the PR exists, edit it in place and leave its draft status alone — a ready PR stays
+ready, a draft stays a draft. If it does not exist, create it as a draft, unless the
+user explicitly asked for a non-draft one. Silence means draft.
 
 ## Report
 
-Show the final title and body. If you cut something a reasonable person would have
+After applying the final title and body, notify the user. If you cut something a reasonable person would have
 kept, say what and why, in one line. Do not narrate the passes.

@@ -1,7 +1,7 @@
 {
   "name": "ruthless-pr-edit",
   "description": "Write or edit a pull request title and body by ruthless subtraction",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Jacob Barrieault"
   },
