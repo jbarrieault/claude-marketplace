@@ -24,7 +24,7 @@ renamed public API, a new endpoint, a removed config key.
 
 - *How* (cut): "Wraps `OrgLookup#find` in a `RedisCache` with a 5-minute TTL keyed on
   org id and `updated_at`."
-- *What* (keep): "Org lookups now hit Redis instead of Postgres on every request."
+- *What* (keep): "Read org lookups from Redis instead of Postgres."
 
 The reader is a colleague who knows the codebase but not this branch. They should
 finish the body knowing what changed and whether they are the right reviewer, in under
@@ -111,6 +111,17 @@ Two sections, and the second is optional.
 
 **Summary** is one sentence. Not two joined by a semicolon or an em-dash. If you cannot say it in one,
 you do not yet understand the change well enough to describe it — reread the diff.
+
+Write it in the imperative, the same voice as the title and a commit subject: the PR
+*does* something to the codebase. Describing the resulting state reads as a report on how
+things already work, which buries the fact that this branch is what changes them.
+
+- Yes: "Block prompt injection in XML with an AST parse step"
+- No: "Prompt injection in XML is blocked by an AST parse step"
+- No: "This PR adds an AST parse step that blocks prompt injection in XML"
+
+The Summary is not a restatement of the title. It is the same voice carrying the one or
+two facts the title had no room for.
 
 **Details** does not exist by default. It appears only when pass 5 found something a
 reviewer would be wrong without, and then it is one or two sentences held to the same

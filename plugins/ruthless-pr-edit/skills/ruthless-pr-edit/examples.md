@@ -44,8 +44,8 @@ Nothing here is false. Almost none of it is needed.
 
 > ## Summary
 >
-> Org lookups hit Redis instead of Postgres, with a five-minute TTL and invalidation when
-> the org changes.
+> Read org lookups from Redis instead of Postgres, with a five-minute TTL and invalidation
+> when the org changes.
 
 Everything cut was either in the diff, in the commits, or in nobody's interest. The TTL
 and the invalidation survived because they are the two things a reviewer would ask about
@@ -87,7 +87,7 @@ Reduction first. Then one sentence returns, because a reviewer would be wrong wi
 
 > ## Summary
 >
-> Messages can be scoped per tenant (ENG-4471).
+> Scope messages per tenant (ENG-4471).
 >
 > ## Details
 >
@@ -114,13 +114,25 @@ said anything, and the fix is a real sentence, not a shorter empty one.
 
 > ## Summary
 >
-> Failed webhook deliveries were marked complete instead of requeued, so any delivery
-> that hit a 500 was silently lost (ENG-4502).
+> Requeue failed webhook deliveries instead of marking them complete, so a delivery that
+> hits a 500 is no longer silently lost (ENG-4502).
 
-Barely longer. It now tells an uninformed reader what changed and why it mattered. No
-Details section, because there is nothing a reviewer would get wrong without one.
+Barely longer. It now tells an uninformed reader what changed and why it mattered. The
+imperative does the work: "Failed deliveries were marked complete" would describe the bug
+as if it were still the behavior.
 
 ---
+
+## Voice
+
+The Summary moves the codebase; it does not report on it.
+
+| Flat | Voiced |
+| --- | --- |
+| `Prompt injection in XML is blocked by an AST parse step` | `Block prompt injection in XML with an AST parse step` |
+| `Sync now retries on transient S3 errors` | `Retry sync on transient S3 errors` |
+| `This PR adds CSV export to reports` | `Export reports as CSV` |
+| `Org lookups are served from Redis` | `Serve org lookups from Redis` |
 
 ## Titles
 
