@@ -30,6 +30,17 @@
       },
       "keywords": ["github", "pull-request", "writing", "editing"],
       "category": "productivity"
+    },
+    {
+      "name": "non-technical-pm",
+      "source": "./plugins/non-technical-pm",
+      "description": "Summarize or explain recent work or a recent answer for a non-technical Product Manager",
+      "version": "1.1.0",
+      "author": {
+        "name": "Jacob Barrieault"
+      },
+      "keywords": ["writing", "summary", "product", "communication"],
+      "category": "productivity"
     }
   ]
 }

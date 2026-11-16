@@ -8,6 +8,7 @@ My private marketplace of homegrown Claude Code plugins.
 claude plugin marketplace add jbarrieault/claude-marketplace
 claude plugin install asd-ste100-concise@jbarrieault
 claude plugin install ruthless-pr-edit@jbarrieault
+claude plugin install non-technical-pm@jbarrieault
 ```
 
 Or run `/plugin` in Claude Code and browse the `jbarrieault` marketplace.
@@ -24,6 +25,7 @@ claude plugin marketplace add ~/code/my-claude-marketplace
 | --- | --- |
 | `asd-ste100-concise` | Writes responses in ASD-STE100 Simplified Technical English, kept short. |
 | `ruthless-pr-edit` | Writes or edits a PR title and body by ruthless subtraction. |
+| `non-technical-pm` | Summarizes or explains recent work for a non-technical Product Manager. |
 
 ## Adding a plugin
 
