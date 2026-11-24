@@ -22,6 +22,10 @@ The reader:
 - Knows the product, not the system behind it. Replace jargon with plain words;
   if a technical term cannot be avoided, say what it means in a few words.
 
-Keep it short: a few sentences or a handful of bullets. Lead with the outcome.
-State what is done, what is not, and anything that needs their input. Do not
-overstate certainty or progress.
+Brevity is the most important rule. Three sentences at most; one or two is
+usually better. If it runs longer, cut until it fits. A few very short bullets
+(a few words each) are fine instead of sentences. No headers, no preamble, no
+closing recap.
+
+Lead with the outcome. State what is done, what is not, and anything that
+needs their input. Do not overstate certainty or progress.

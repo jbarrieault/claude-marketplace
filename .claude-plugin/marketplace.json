@@ -35,7 +35,7 @@
       "name": "non-technical-pm",
       "source": "./plugins/non-technical-pm",
       "description": "Summarize or explain recent work or a recent answer for a non-technical Product Manager",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Jacob Barrieault"
       },
